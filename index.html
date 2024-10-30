@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monk Shred Wax</title>
+    <link rel="icon" href="images/favicon.ico.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1b1f30, #2a2f48);
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        /* Header and Logo */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            margin-bottom: 40px;
+        }
+        .logo-top-left {
+            width: 80px;
+        }
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #ff6900;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Promotions and Order Form */
+        .promotions, .order-form {
+            padding: 20px;
+            background-color: #1f2436;
+            border-radius: 0; /* Sharp edges */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: #e2e8f0;
+            flex: 1;
+            max-width: 500px;
+        }
+        .promotions h2, .order-form h2 {
+            font-size: 1.8em;
+            color: #ff6900; /* Bright orange for headings */
+        }
+        .promotions strong {
+            color: #ff6900;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #3b4252;
+            border-radius: 0; /* Sharp edges */
+            background-color: #2d3348;
+            color: #e2e8f0;
+            transition: border 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #ff6900;
+            outline: none;
+        }
+        label {
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+        
+        /* Modern Button Style */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 0; /* Sharp edges */
+            background-color: #ff6900;
+            color: #1f2436;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #e55d00;
+            transform: scale(1.02);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .logo-top-left {
+                width: 60px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            .promotions, .order-form {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Logo and Social Media Links -->
+<div class="header">
+    <img src="images/logo.png" alt="Monk Shred Wax Logo" class="logo-top-left">
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/share/6gZhmwHkVinHEQ3G/?mibextid=LQQJ4d" target="_blank">
+            <img src="images/facebookLogo.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/monk_shred/" target="_blank">
+            <img src="images/instaLogo.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+</div>
+
+<header>
+    <h1>Monk Shred Wax</h1>
+</header>
+
+<div class="main-content">
+    <!-- Promotions section -->
+    <section class="promotions">
+        <h2>Promotions</h2>
+        <p><strong>20% off First-Time Service.</strong></p>
+        <p><strong>Buy 3, Get 1 Free!</strong></p>
+        <p><strong>Friend Discount:</strong> Every friend you invite = 15% off. Yes! Deals CAN stack!</p>
+        <p>Make this season the best season you've ever had. Hand waxing is an art, an art that we've perfected and are now sharing with the world. We promise precision waxing & sharpening, complete tune-ups, and fast, reliable service.</p>
+        <h3>Services</h3>
+        <ul>
+            <li>$25 - Hand Wax</li>
+            <li>$60 - Tune-Up</li>
+        </ul>
+        <p>For questions & details text: <strong>(435) 500-8558</strong></p>
+    </section>
+
+    <!-- Order form -->
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="boards">Number of Boards/Skis:</label>
+            <input type="number" id="boards" name="boards" min="1" required>
+
+            <label for="pickupOption">Pickup and Drop-off Option:</label>
+            <select id="pickupOption" name="pickupOption" required onchange="toggleAddressField()">
+                <option value="pickupDropoff">Pickup and Drop-off (additional fees apply)</option>
+                <option value="selfService">Drop-off and Pick-up Yourself (no additional fee)</option>
+            </select>
+
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="(optional)">
+
+            <label for="email">Email (Optional):</label>
+            <input type="email" id="email" name="email" placeholder="(optional)">
+
+            <label for="services">Select Service:</label>
+            <select id="services" name="services" required>
+                <option value="wax">Wax</option>
+                <option value="tuneup">Tune-Up</option>
+            </select>
+
+            <div id="addressField" style="display: none;">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address if pickup/drop-off selected">
+            </div>
+
+            <label for="notes">Special Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any additional instructions"></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+</div>
+
+<script>
+    function toggleAddressField() {
+        const pickupOption = document.getElementById('pickupOption').value;
+        const addressField = document.getElementById('addressField');
+        addressField.style.display = pickupOption === 'pickupDropoff' ? 'block' : 'none';
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+
+        if (!phone && !email) {
+            alert('Please provide at least one contact method: either a phone number or an email address.');
+            event.preventDefault();
+        } else {
+            alert('Order submitted successfully!');
+            this.reset();
+        }
+    });
+</script>
+
+<form action="https://formsubmit.co/Sterling.Murphy@icloud.com" method="POST">
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
